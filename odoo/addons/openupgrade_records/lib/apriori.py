@@ -33,6 +33,10 @@ renamed_modules = {
     'stock_pack_operation_auto_fill': 'stock_move_line_auto_fill',
     # OCA/web
     'web_advanced_filters': 'web_advanced_filter',
+    # coopiteasy/addons
+    'pos_round_cash_payment_line': 'pos_round_cash_payment',
+    # coopiteasy/obeesdoo
+    'stock_coverage': 'beesdoo_stock_coverage',
 }
 
 merged_modules = {
@@ -87,6 +91,10 @@ merged_modules = {
     'web_sheet_full_width': 'web_responsive',
     # OCA/website
     'website_form_metadata': 'website_form',
+    # coopiteasy/addons
+    'account_archive_journals': 'account',
+    'account_bank_statement_line_memo': 'account',
+    'res_users_case_insensitive': 'auth_user_case_insensitive',  # coopiteasy/addons -> oca/server-auth
 }
 
 # only used here for openupgrade_records analysis:
