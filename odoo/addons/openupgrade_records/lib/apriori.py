@@ -36,6 +36,7 @@ renamed_modules = {
     # coopiteasy/addons
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
     # coopiteasy/obeesdoo
+    'beesdoo_custom': 'beesdoo_product_usability',
     'stock_coverage': 'beesdoo_stock_coverage',
 }
 
