@@ -95,6 +95,8 @@ merged_modules = {
     # coopiteasy/addons
     'account_archive_journals': 'account',
     'account_bank_statement_line_memo': 'account',
+    'easy_my_coop_document': 'document_hosting',  # coopiteasy/vertical-cooperative -> coopiteasy/addons
+    'easy_my_coop_website_document': 'document_hosting',  # coopiteasy/vertical-cooperative -> coopiteasy/addons
     'res_users_case_insensitive': 'auth_user_case_insensitive',  # coopiteasy/addons -> oca/server-auth
 }
 
