@@ -98,6 +98,8 @@ merged_modules = {
     'easy_my_coop_document': 'document_hosting',  # coopiteasy/vertical-cooperative -> coopiteasy/addons
     'easy_my_coop_website_document': 'document_hosting',  # coopiteasy/vertical-cooperative -> coopiteasy/addons
     'res_users_case_insensitive': 'auth_user_case_insensitive',  # coopiteasy/addons -> oca/server-auth
+    # coopiteasy/vertical-cooperative
+    'easy_my_coop_eater': 'beesdoo_easy_my_coop',  # coopiteasy/vertical-cooperative -> beescoop/obeesdoo
 }
 
 # only used here for openupgrade_records analysis:
