@@ -35,6 +35,8 @@ renamed_modules = {
     'web_advanced_filters': 'web_advanced_filter',
     # coopiteasy/addons
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
+    'product_to_scale_bizerba': 'product_to_bizerba_scale',
+    'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
     # coopiteasy/obeesdoo
     'beesdoo_custom': 'beesdoo_product_usability',
     'stock_coverage': 'beesdoo_stock_coverage',
