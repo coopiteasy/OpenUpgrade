@@ -34,10 +34,10 @@ renamed_modules = {
     # OCA/web
     'web_advanced_filters': 'web_advanced_filter',
     # coopiteasy/addons
+    'invoice_default_account_date': 'account_invoice_default_account_date',
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
     'product_to_scale_bizerba': 'product_to_bizerba_scale',
     'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
-    'invoice_default_account_date': 'account_invoice_default_account_date',
     # coopiteasy/obeesdoo
     'beesdoo_custom': 'beesdoo_product_usability',
     'stock_coverage': 'beesdoo_stock_coverage',
