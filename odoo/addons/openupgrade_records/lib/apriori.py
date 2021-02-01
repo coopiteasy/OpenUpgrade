@@ -42,6 +42,7 @@ renamed_modules = {
     'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
     # coopiteasy/obeesdoo
     'beesdoo_custom': 'beesdoo_product_usability',
+    'beesdoo_pos_remove_0_qty': 'pos_remove_0_qty',  # in coopiteasy/cie-pos
     'stock_coverage': 'beesdoo_stock_coverage',
 }
 
