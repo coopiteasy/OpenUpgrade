@@ -36,6 +36,7 @@ renamed_modules = {
     # coopiteasy/addons
     'invoice_default_account_date': 'account_invoice_default_account_date',
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
+    'pos_search_accented_unaccented': 'pos_accented_search',
     'product_report_v10': 'product_label_report',
     'product_to_scale_bizerba': 'product_to_bizerba_scale',
     'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
