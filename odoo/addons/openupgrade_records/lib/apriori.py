@@ -36,7 +36,6 @@ renamed_modules = {
     # coopiteasy/addons
     'invoice_default_account_date': 'account_invoice_default_account_date',
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
-    'pos_search_accented_unaccented': 'pos_accented_search',
     'product_report_v10': 'product_label_report',
     'product_to_scale_bizerba': 'product_to_bizerba_scale',
     'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
@@ -103,6 +102,7 @@ merged_modules = {
     'account_bank_statement_line_memo': 'account',
     'easy_my_coop_document': 'document_hosting',  # coopiteasy/vertical-cooperative -> coopiteasy/addons
     'easy_my_coop_website_document': 'document_hosting',  # coopiteasy/vertical-cooperative -> coopiteasy/addons
+    'pos_search_accented_unaccented': 'pos_accented_search',  # coopiteasy/addons -> oca/pos
     'res_users_case_insensitive': 'auth_user_case_insensitive',  # coopiteasy/addons -> oca/server-auth
     # coopiteasy/vertical-cooperative
     'easy_my_coop_eater': 'beesdoo_easy_my_coop',  # coopiteasy/vertical-cooperative -> beescoop/obeesdoo
