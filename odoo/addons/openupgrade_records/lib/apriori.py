@@ -37,6 +37,10 @@ renamed_modules = {
     # OCA/stock-logistics-workflow:
     'product_customer_code_picking':
         'product_supplierinfo_for_customer_picking',
+    # coopiteasy/vertical-cooperative -> coopiteasy/addons
+    'easy_my_coop_document': 'document_hosting',
+    # coopiteasy/addons
+    'product_report_v10': 'product_label_report',
 }
 
 merged_modules = [
