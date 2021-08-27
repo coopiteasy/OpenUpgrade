@@ -39,6 +39,8 @@ renamed_modules = {
     'product_report_v10': 'product_label_report',
     'product_to_scale_bizerba': 'product_to_bizerba_scale',
     'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
+    # coopiteasy/cie-timesheet
+    'hr_timesheet_default_analytic_account': 'hr_timesheet_sheet_prefill',
     # coopiteasy/obeesdoo
     'beesdoo_custom': 'beesdoo_product_usability',
     'beesdoo_pos_remove_0_qty': 'pos_remove_0_qty',  # in coopiteasy/cie-pos
