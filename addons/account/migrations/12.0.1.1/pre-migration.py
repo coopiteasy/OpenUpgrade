@@ -119,10 +119,51 @@ def prefill_account_chart_template_transfer_account_prefix(env):
         env.cr, "UPDATE account_chart_template "
                 "SET transfer_account_code_prefix = 'OUB'")
 
+def fix_users_in_both_group_tax_b2c_and_b2b(env):
+    """
+    Check if there is users that are in both groups :
+        - self.env.ref("sale.group_show_price_subtotal")
+        - self.env.ref("sale.group_show_price_total")
+    A a constrain in res.users enforce, users should be only in one of
+    these two groups.
+    These users belongs to the 2 groups because of a relation between
+    system groups :
+        - base.group_user
+        - base.group_portal
+        - base.group_public
+    and the 2 groups :
+        - sale.group_show_price_subtotal
+        - sale.group_show_price_total
+    This method keeps only one implies relation between these groups
+    based on configuration sale.sale_show_tax.
+    """
+    group_subtotal = env.ref("sale.group_show_price_subtotal")
+    group_total = env.ref("sale.group_show_price_total")
+    group_user = env.ref("base.group_user")
+    group_portal = env.ref("base.group_portal")
+    group_public = env.ref("base.group_public")
+    # Check the config to see in witch group users should stay
+    # See sale.models.res_config_settings
+    sale_show_tax = env["ir.config_parameter"].sudo().get_param(
+        "sale.sale_show_tax", default="subtotal"
+    )
+    openupgrade.logged_query(
+        env.cr,
+        "DELETE FROM res_groups_implied_rel WHERE gid in (%s, %s, %s) AND hid = %s" %
+        (group_user.id, group_portal.id, group_public.id,
+         group_total.id if sale_show_tax == "subtotal" else group_subtotal.id),
+    )
+    openupgrade.logged_query(
+        env.cr,
+        "DELETE FROM res_groups_users_rel WHERE gid = %s" %
+        (group_total.id if sale_show_tax == "subtotal" else group_subtotal.id),
+    )
+
 
 @openupgrade.migrate()
 def migrate(env, version):
     cr = env.cr
+    fix_users_in_both_group_tax_b2c_and_b2b(env)
     openupgrade.delete_records_safely_by_xml_id(
         env, ['account.action_view_account_move_line_reconcile'],
     )
