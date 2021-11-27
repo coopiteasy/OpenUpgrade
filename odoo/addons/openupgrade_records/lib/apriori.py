@@ -39,6 +39,11 @@ renamed_modules = {
     'product_report_v10': 'product_label_report',
     'product_to_scale_bizerba': 'product_to_bizerba_scale',
     'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
+    'provelo_customization': 'provelo_custom',
+    # coopiteasy/cie-resource
+    'resource_activity_reports': 'provelo_resource_activity_reports',
+    'resource_stock_informations': 'resource_stock_information',
+    'resource_vehicule': 'resource_vehicle',
     # coopiteasy/cie-timesheet
     'hr_timesheet_default_analytic_account': 'hr_timesheet_sheet_prefill',
     # coopiteasy/obeesdoo
