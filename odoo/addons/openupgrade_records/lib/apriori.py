@@ -33,6 +33,10 @@ renamed_modules = {
     'stock_pack_operation_auto_fill': 'stock_move_line_auto_fill',
     # OCA/web
     'web_advanced_filters': 'web_advanced_filter',
+    # OCA/l10n-brazil
+    'l10n_br_account_payment': 'l10n_br_account_payment_order',
+    'l10n_br_account_product': 'l10n_br_fiscal',
+    'l10n_br_data_account_product': 'l10n_br_nfe_account',
     # coopiteasy/addons
     'invoice_default_account_date': 'account_invoice_default_account_date',
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
@@ -79,9 +83,12 @@ merged_modules = {
     'account_asset': 'account_asset_management',
     'account_asset_depr_line_cancel': 'account_asset_management',
     'account_asset_disposal': 'account_asset_management',
+    'account_asset_management_xls': 'account_asset_management',
     'account_reversal': 'account',
     # OCA/e-commerce
     'website_sale_default_country': 'website_sale',
+    # OCA/edi
+    'base_business_document_import_stock': 'base_business_document_import',
     # OCA/event
     'event_registration_mass_mailing': 'mass_mailing_event',
     # OCA/hr
@@ -104,6 +111,13 @@ merged_modules = {
     'web_sheet_full_width': 'web_responsive',
     # OCA/website
     'website_form_metadata': 'website_form',
+    # OCA/l10n-brazil
+    'l10n_br_account_banking_payment': 'l10n_br_account_payment_order',
+    'l10n_br_account_product_service': 'l10n_br_fiscal',
+    'l10n_br_data_account': 'l10n_br_fiscal',
+    'l10n_br_sale_product': 'l10n_br_sale',
+    'l10n_br_data_account_service': 'l10n_br_fiscal',
+    'l10n_br_zip_correios': 'l10n_br_zip',
     # coopiteasy/addons
     'account_archive_journals': 'account',
     'account_bank_statement_line_memo': 'account',

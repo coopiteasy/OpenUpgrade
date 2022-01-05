@@ -3,7 +3,7 @@
 # * account
 # 
 # Translators:
-# David Machakhelidze <david.machakhelidze@gmail.com>, 2019
+# Davit Matchakhelidze <david.machakhelidze@gmail.com>, 2019
 # Nika Chikhradze <nika@globaltravel.ge>, 2019
 # Dachi Darchiashvili <darcho.dd@gmail.com>, 2019
 # Saba Khmaladze <skhmaladze@uglt.org>, 2019
@@ -7882,6 +7882,12 @@ msgid ""
 msgstr ""
 
 #. module: account
+#: code:addons/account/models/account_cash_rounding.py:33
+#, python-format
+msgid "Please set a strictly positive rounding value."
+msgstr ""
+
+#. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "Please use the following communication for your payment :"
 msgstr ""
@@ -10113,7 +10119,10 @@ msgstr ""
 #. module: account
 #: code:addons/account/models/account.py:564
 #, python-format
-msgid "The holder of a journal's bank account must be the company (%s)."
+msgid ""
+"The holder of the bank account of a \"Bank\" type journal must be the company (%s).\n"
+"However, the holder of \"%s\" is \"%s\".\n"
+"Please select another bank account or change the holder of \"%s\"."
 msgstr ""
 
 #. module: account
@@ -11467,6 +11476,14 @@ msgid ""
 msgstr ""
 "არ შეიძლება ფისკალური წლების გადაფარვა! გთხოვთ შეამოწმეთ პერიოდების დაწყების"
 " და დასრულების თარიღები."
+
+#. module: account
+#: code:addons/account/models/partner.py:441
+#, python-format
+msgid ""
+"You can't change the company of a partner if the latter already has some "
+"invoices."
+msgstr ""
 
 #. module: account
 #: code:addons/account/models/account_invoice.py:1784
