@@ -38,12 +38,16 @@ renamed_modules = {
     'l10n_br_account_product': 'l10n_br_fiscal',
     'l10n_br_data_account_product': 'l10n_br_nfe_account',
     # coopiteasy/addons
+    'account_invoice_label_certisys': 'report_certisys_label',
     'invoice_default_account_date': 'account_invoice_default_account_date',
+    'partner_wharehouse': 'partner_warehouse',
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
     'product_report_v10': 'product_label_report',
     'product_to_scale_bizerba': 'product_to_bizerba_scale',
     'product_to_scale_bizerba_extend': 'product_to_bizerba_scale',
     'provelo_customization': 'provelo_custom',
+    'purchase_order_status': 'purchase_invoice_status',
+    'sale_report_extend': 'sale_report_partner_category',
     # coopiteasy/cie-resource
     'resource_activity_reports': 'provelo_resource_activity_reports',
     'resource_stock_informations': 'resource_stock_information',
@@ -125,6 +129,8 @@ merged_modules = {
     'easy_my_coop_website_document': 'document_hosting',  # coopiteasy/vertical-cooperative -> coopiteasy/addons
     'pos_search_accented_unaccented': 'pos_accented_search',  # coopiteasy/addons -> oca/pos
     'res_users_case_insensitive': 'auth_user_case_insensitive',  # coopiteasy/addons -> oca/server-auth
+    ' website_delivery_excluded_vat_label': 'website_sale_delivery_vat_label',
+    'website_sale_excluded_vat_label': 'website_sale_delivery_vat_label',
     # coopiteasy/vertical-cooperative
     'easy_my_coop_eater': 'beesdoo_easy_my_coop',  # coopiteasy/vertical-cooperative -> beescoop/obeesdoo
 }
