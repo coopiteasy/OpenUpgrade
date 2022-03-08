@@ -117,9 +117,14 @@ merged_modules = {
     'web_widget_domain_v11': 'web',
     # OCA/website
     'website_seo_redirection': 'website',
+    'website_payment_v10': 'website_payment',
+    'website_portal_sale_v10': 'website_portal_sale',
+    'website_portal_v10': 'website_portal',
     # OCA/bank-statement-import
     'account_bank_statement_import_camt':
     'account_bank_statement_import_camt_oca',
+    # coopiteasy/addons
+    'hr_expense_v10': 'hr_expense',
 }
 
 renamed_models = {
