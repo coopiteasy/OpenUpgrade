@@ -58,6 +58,31 @@ renamed_modules = {
     'beesdoo_custom': 'beesdoo_product_usability',
     'beesdoo_pos_remove_0_qty': 'pos_remove_0_qty',  # in coopiteasy/cie-pos
     'stock_coverage': 'beesdoo_stock_coverage',
+    # coopiteasy/vertical-cooperative
+    "easy_my_coop": "cooperator",
+    "easy_my_coop_api": "connector_api",
+    "easy_my_coop_api_logs": "connector_api_logs",
+    "easy_my_coop_be": "l10n_be_cooperator",
+    "easy_my_coop_ch": "l10n_ch_cooperator",
+    # easy_my_coop_connector        => waiting for financité
+    # easy_my_coop_dividend         => do not move to oca, not installable
+    "easy_my_coop_es": "l10n_es_cooperator",
+    "easy_my_coop_es_website": "l10n_es_cooperator",
+    # easy_my_coop_export_xlsx      => do not move to oca, not installable
+    "easy_my_coop_fr": "l10n_fr_cooperator",
+    # easy_my_coop_loan             => do not move to oca, seldom used
+    # easy_my_coop_loan_account     => idem
+    # easy_my_coop_loan_account_be  => idem
+    # easy_my_coop_loan_bba         => idem
+    # easy_my_coop_loan_website     => idem
+    "easy_my_coop_payment_term": "cooperator",
+    # easy_my_coop_website
+    "easy_my_coop_website": "cooperator_website",
+    "easy_my_coop_website_portal": "cooperator_portal",
+    "easy_my_coop_website_taxshelter": "l10n_be_cooperator_portal",
+    # partner_age                   => dependency removed, move to addons
+    # theme_light                   => removed from dependencies
+    "website_recaptcha_reloaded": "portal_recaptcha",
 }
 
 merged_modules = {
@@ -133,6 +158,7 @@ merged_modules = {
     'website_sale_excluded_vat_label': 'website_sale_delivery_vat_label',
     # coopiteasy/vertical-cooperative
     'easy_my_coop_eater': 'beesdoo_easy_my_coop',  # coopiteasy/vertical-cooperative -> beescoop/obeesdoo
+    "easy_my_coop_taxshelter_report": "l10n_be_cooperator",
 }
 
 # only used here for openupgrade_records analysis:
