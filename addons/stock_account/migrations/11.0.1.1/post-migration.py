@@ -167,7 +167,18 @@ def update_stock_move_value_fifo(env):
     )
 
 
+def drop_stock_history_view(env):
+    openupgrade.logged_query(
+        env.cr,
+        """
+        DROP VIEW stock_history
+        """
+    )
+
+
 @openupgrade.migrate(use_env=True)
 def migrate(env, version):
     # set_stock_move_id_for_account_moves(env) # TODO: not sure if we'll do
     update_stock_move_value_fifo(env)
+
+    drop_stock_history_view(env)

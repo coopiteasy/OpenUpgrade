@@ -137,6 +137,15 @@ def rename_mass_mailing_event(env):
             merge_modules=True)
 
 
+def drop_campaign_analysis_view(env):
+    openupgrade.logged_query(
+        env.cr,
+        """
+        DROP VIEW IF EXISTS campaign_analysis
+        """
+    )
+
+
 @openupgrade.migrate()
 def migrate(env, version):
     openupgrade.remove_tables_fks(env.cr, _obsolete_tables)
@@ -185,3 +194,5 @@ def migrate(env, version):
     # Rename 'mass_mailing_event' module to not collide with the new
     # core module with the same name.
     rename_mass_mailing_event(env)
+
+    drop_campaign_analysis_view(env)
