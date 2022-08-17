@@ -15,7 +15,18 @@ def fill_several_campaign_id(env):
                 AND tt.campaign_id IS NULL""".format(table))
 
 
+def drop_mail_statistics_report_view(env):
+    openupgrade.logged_query(
+        env.cr,
+        """
+        DROP VIEW mail_statistics_report
+        """
+    )
+
+
 @openupgrade.migrate(use_env=True)
 def migrate(env, version):
     fill_several_campaign_id(env)
     openupgrade.load_data(env.cr, 'mass_mailing', 'migrations/13.0.2.0/noupdate_changes.xml')
+
+    drop_mail_statistics_report_view(env)
