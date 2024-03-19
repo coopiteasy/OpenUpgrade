@@ -45,9 +45,6 @@ def _handle_website_legal_page(env):
     the information added in the page created by 'website_legal_page' has to be
     transferred to the invoice_terms_html field of the company.
     """
-    openupgrade.update_module_names(
-        env.cr, [("website_legal_page", "account")], merge_modules=True
-    )
     for company in env["res.company"].with_context(active_test=False).search([]):
         openupgrade.logged_query(
             env.cr,
@@ -90,6 +87,6 @@ def migrate(env, version):
         ],
     )
     if env["ir.model.data"].search(
-        [("module", "=", "website_legal_page"), ("name", "=", "legal_page")]
+        [("module", "=", "account"), ("name", "=", "legal_page")]
     ):
         _handle_website_legal_page(env)

@@ -48,6 +48,7 @@ merged_modules = {
     "sale_timesheet_purchase": "sale_timesheet",
     "website_event_track_exhibitor": "website_event_exhibitor",
     "website_form": "website",
+    "website_legal_page": "account",
     "website_sale_management": "website_sale",
     # odoo/design-themes
     "website_animate": "website",
