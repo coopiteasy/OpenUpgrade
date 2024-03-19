@@ -4,6 +4,33 @@ from markupsafe import Markup
 from openupgradelib import openupgrade
 
 
+def ensure_one_view(view, website):
+    """Raise an error if there is several view in *view* record set"""
+    if len(view) > 1:
+        ref = view[0].key
+        view_with_xml_id = view.filtered(lambda r: r.xml_id == ref)
+        error_msg = (
+            "There is several ir.ui.view with key equal to "
+            "'%s' for website(%s). "
+            "In order to migrate we need only one view per website "
+            "with a key equal to '%s'. "
+            "The views found with such a key are: ir.ui.view(%s). "
+        ) % (
+            ref,
+            website.id,
+            ref,
+            ", ".join(str(i) for i in view.ids),
+        )
+        if len(view_with_xml_id) == 1:
+            error_msg += (
+                "The ir.ui.view(%s) has an xml_id equal to "
+                "'%s', you may want to keep this "
+                "one and delete the others before migrating."
+            ) % (view_with_xml_id.id, ref)
+
+        raise ValueError(error_msg)
+
+
 def extract_footer_copyright_company_name(env):
     """Replace Copyright content in the new v15 template so as not to lose
     content from previous versions if it has been customised, or directly put
@@ -13,6 +40,7 @@ def extract_footer_copyright_company_name(env):
         main_copyright_view = website.with_context(website_id=website.id).viewref(
             "website.footer_copyright_company_name"
         )
+        ensure_one_view(main_copyright_view, website)
         main_copyright_arch = main_copyright_view.arch_db
         main_copyright_pattern = (
             r'<span class="o_footer_copyright_name mr-2">(.*?)<\/span>'
@@ -26,6 +54,7 @@ def extract_footer_copyright_company_name(env):
             website_layout_view = website.with_context(website_id=website.id).viewref(
                 "website.layout"
             )
+            ensure_one_view(website_layout_view, website)
             website_layout_arch = website_layout_view.arch_db or ""
             website_layout_pattern = (
                 r'<span class="o_footer_copyright_name mr-2">(.*?)<\/span>'
@@ -79,6 +108,7 @@ def update_contact_form_company_description(env):
         website_contactus_view = website.with_context(website_id=website.id).viewref(
             "website.contactus"
         )
+        ensure_one_view(website_contactus_view, website)
         company = website.company_id
         google_maps_link = (
             (
