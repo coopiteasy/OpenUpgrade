@@ -113,3 +113,5 @@ merged_models = {
     "stock.inventory": "stock.quant",
     "stock.inventory.line": "stock.move.line",
 }
+
+merged_modules["project_status"] = "project"
