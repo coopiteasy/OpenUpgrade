@@ -155,6 +155,28 @@ def _fill_project_allow_milestones(env):
     )
 
 
+def _migrate_project_status(env):
+    """Migrate project_status module if installed to
+    project.project.stages.
+    """
+    if openupgrade.table_exists(env.cr, "project_status"):
+        openupgrade.rename_tables(
+            env.cr,
+            [("project_status", "project_project_stage")],
+        )
+        openupgrade.rename_columns(
+            env.cr,
+            {
+                "project_project_stage": [
+                    ("company_id", None),
+                    ("description", None),
+                    ("status_sequence", "sequence"),
+                    ("is_closed", None),
+                ],
+            },
+        )
+
+
 @openupgrade.migrate()
 def migrate(env, version):
     openupgrade.add_fields(env, _new_fields)
@@ -163,6 +185,7 @@ def migrate(env, version):
     _fill_project_last_update_status_if_null(env)
     _compute_project_task_ancestor_id(env)
     _compute_project_task_is_analytic_account_id_changed(env)
+    _migrate_project_status(env)
 
     # Remove SQL view project_task_burndown_chart_report not used anymore in Odoo v16.0
     openupgrade.logged_query(
