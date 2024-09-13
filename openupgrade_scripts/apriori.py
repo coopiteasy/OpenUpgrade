@@ -158,3 +158,7 @@ renamed_models = {
 
 # only used here for upgrade_analysis
 merged_models = {}
+
+
+# Coop IT Easy modules
+renamed_modules["portal_recaptcha"] = "website_recaptcha_v2"
