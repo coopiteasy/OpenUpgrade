@@ -154,7 +154,11 @@ def _convert_carrier_zip_ranges(env):
         "WHERE zip_from IS NOT NULL AND zip_to IS NOT NULL"
     )
     for carrier_id, zip_from, zip_to in env.cr.fetchall():
-        if zip_from.isnumeric() and zip_to.isnumeric():
+        # Disable numerical_range_to_prefixes because \d is converted to
+        # upper letter and so is no longer a valid match and because
+        # number that starts with zeros are not correctly considered due
+        # to the int() convertion.
+        if False and zip_from.isnumeric() and zip_to.isnumeric():
             prefixes = numerical_range_to_prefixes(int(zip_from), int(zip_to))
         else:
             try:
