@@ -38,7 +38,6 @@ renamed_modules = {
     'l10n_br_account_product': 'l10n_br_fiscal',
     'l10n_br_data_account_product': 'l10n_br_nfe_account',
     # coopiteasy/addons
-    'account_invoice_label_certisys': 'report_certisys_label',
     'invoice_default_account_date': 'account_invoice_default_account_date',
     'partner_wharehouse': 'partner_warehouse',
     'pos_round_cash_payment_line': 'pos_round_cash_payment',
