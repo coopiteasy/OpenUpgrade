@@ -48,6 +48,8 @@ renamed_modules = {
     ),
     # OCA/web
     'web_advanced_search_x2x': 'web_advanced_search',
+    # coopiteasy/addons
+    'account_invoice_label_certisys': 'report_certisys_label',
 }
 
 merged_modules = {
